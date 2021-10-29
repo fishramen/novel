@@ -1,0 +1,25 @@
+import random
+
+novel = """
+
+*title*
+
+
+
+
+
+"""
+
+
+
+for i in range(50000):
+  line = ""
+  for a in range(random.randint(1,90)): line += random.choice(["E", "R", "R", "O", "R","/"," ","  "," ","00","1","//","\\","e","r","r","o","r", "\n"])
+  line += random.choice(["00","0","1","11","01","10","001","110"])
+  for a in range(100 - len(line)): line += random.choice(["E", "R", "R", "O", "R","/"," ","  "," ","00","1","//","\\","e","r","r","o","r", "\n"])
+  novel += line + "\n"
+
+
+file = open("novel.txt", "w")
+file.write(novel)
+file.close()
